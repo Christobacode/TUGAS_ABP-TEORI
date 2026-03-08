@@ -1,0 +1,106 @@
+<!--TUGAS 1.1 HTML-->
+<!--Christoba joshua hutagalung - 2311102133-->
+
+<!--Excercise 1 table-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table width=”80%” height=”50%” border="1"> 
+        <tr> 
+            <th rowspan="2">Nama Lengkap</th> 
+            <th colspan="2">Gelar Pendidikan</th> 
+            <th rowspan="2">Age</th> 
+        </tr> 
+        <tr> 
+            <th> Sarjana </th> 
+            <th> Magister </th> 
+        </tr> 
+        <tr> 
+            <td>Budi</td> 
+            <td>S.Kom</td> 
+            <td>M.Sc</td> 
+            <td>35</td> 
+        </tr> 
+        <tr> 
+            <td>Andi</td> 
+            <td>S.SiKom</td> 
+            <td>M.T</td> 
+            <td>52</td> 
+        </tr> 
+    </table>
+</body>
+</html>
+
+<!--Exercise 2 Form-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise Form Mahasiswa</title>
+</head>
+<body>
+
+    <div style="display: flex; align-items: baseline;">
+        <h2 style="font-family: sans-serif;">Data Mahasiswa</h2>
+    </div>
+
+    <form>
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>NIM :</td>
+                <td><input type="text" name="nim" size="15"></td>
+            </tr>
+            <tr>
+                <td>Nama :</td>
+                <td><input type="text" name="nama" size="30"></td>
+            </tr>
+            <tr>
+                <td>Tgl Lahir (dd-mm-yyyy) :</td>
+                <td><input type="date" name="tgl_lahir"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin :</td>
+                <td>
+                    <input type="radio" name="jk" value="L"> Laki-Laki
+                    <input type="radio" name="jk" value="P"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Alamat di Bandung :</td>
+                <td><textarea name="alamat" rows="5" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Tinggal di :</td>
+                <td>
+                    <select name="tinggal">
+                        <option value="">--pilih--</option>
+                        <option value="kos">Kos/kontrakan</option>
+                        <option value="saudara">Rumah saudara</option>
+                        <option value="ortu">Rumah orang tua</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Pilih 2 hobi yang paling disukai :</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="science"> Science <br>
+                    <input type="checkbox" name="hobi" value="tech"> Technology <br>
+                    <input type="checkbox" name="hobi" value="art"> Art <br>
+                    <input type="checkbox" name="hobi" value="sport"> Sport
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="left">
+                        <input type="button" value="Submit" class="btn-Submit">
+                        <input type="submit" value="Reset" class="btn-Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
