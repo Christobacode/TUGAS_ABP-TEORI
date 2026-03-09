@@ -1,5 +1,3 @@
-<!--TUGAS 1.2 CSS-->
-<!--Christoba joshua hutagalung - 2311102133-->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -18,7 +16,7 @@
     </div>
 
     <nav class="nav-blue">
-        <div class="nav-items">w
+        <div class="nav-items">
             <a href="#">HOME</a>
             <a href="#">STRATEGY</a>
             <a href="#">SOLUSI</a>
@@ -32,10 +30,15 @@
         </div>
     </nav>
 
+    <div style="text-align: center; margin-bottom: 30px;">
+        <button class="btn btn-outline-primary btn-sm" onclick="ubahRataTeks()">Ubah Posisi Teks</button>
+        <button class="btn btn-outline-secondary btn-sm" onclick="ubahWarnaBox()">Toggle Warna Box 1</button>
+    </div>
+
     <div class="grid-section">
         <div class="row row-cols-2 g-3 justify-content-center">
             <div class="col">
-                <div class="item-box bg-green">
+                <div class="item-box bg-green" id="box-pertama">
                     <i class="fas fa-chart-pie"></i>
                     <span>Analytic</span>
                 </div>
@@ -75,5 +78,33 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1. Fungsi merubah alignment teks header (Center/Right)
+    function ubahRataTeks() {
+        let h1 = document.querySelector('.header-logo h1');
+        // Logika: Jika saat ini kanan, pindah ke center. Jika bukan, pindah ke kanan.
+        if (h1.style.textAlign === 'right') {
+            h1.style.textAlign = 'center';
+        } else {
+            h1.style.textAlign = 'right';
+        }
+    }
+
+    // 2. Fungsi toggle warna background box pertama
+    let statusWarna = "asli";
+    function ubahWarnaBox() {
+        let box = document.getElementById('box-pertama');
+        
+        if (statusWarna === "asli") {
+            box.style.backgroundColor = "#333333"; // Berubah jadi abu gelap
+            statusWarna = "berubah";
+        } else {
+            box.style.backgroundColor = ""; // Menghapus inline style agar kembali ke warna CSS (.bg-green)
+            statusWarna = "asli";
+        }
+    }
+</script>
+
 </body>
 </html>
